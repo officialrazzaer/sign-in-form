@@ -1,0 +1,123 @@
+/* general styling */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* styling the center box  */
+
+.main {
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.background-image {
+  background-image: url("background.png");
+  width: 20vw;
+  height: 600px;
+  border-radius: 20px 0 0 20px;
+}
+
+/* Media query for screen widths smaller than 768px */
+@media (max-width: 768px) {
+  .background-image {
+    width: 0%; /* Change the width to 100% to make it responsive */
+    height: auto; /* Allow the height to adjust automatically */
+    border-radius: 20px 20px 0 0; /* Adjust border-radius for all corners */
+  }
+}
+
+.form-contents {
+  padding: 20px;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background-color: rgb(96, 96, 131); */
+  text-align: center;
+}
+
+.text-content {
+  padding-top: 20px;
+  text-align: center;
+  color: black;
+}
+
+.text-content p {
+  font-size: 20px;
+}
+
+/* styling the form  */
+
+.el-form {
+  padding-top: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  color: #444446;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  max-width: 100%;
+  vertical-align: baseline;
+}
+
+form div {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  max-width: 250px;
+  text-align: start;
+}
+
+label {
+  display: block;
+}
+
+.create-account {
+  align-self: flex-start;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+textarea,
+fieldset {
+  width: 100%;
+  border: 1px solid #333;
+  box-sizing: border-box;
+}
+
+/* invalid / valid input  */
+
+input:valid {
+  border: 2px solid black;
+  background-color: lightgreen;
+}
+
+input:invalid:required {
+  background-image: linear-gradient(to right, pink, lightgreen);
+}
